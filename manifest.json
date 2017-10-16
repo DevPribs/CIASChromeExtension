@@ -1,0 +1,23 @@
+{
+	"name": "CIAS Checker",
+	"description": "This extension helps you check off tasks faster.",
+	"version": "1.0",
+	"manifest_version": 2,
+	
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	
+	"content_scripts": [{
+		"js": [
+				"jquery-3.2.1.min.js",
+				"checker.js"
+			  ],
+		"matches": ["https://work.cias.rit.edu/ciastech/checklists/*"],
+		"run_at": "document_end"
+	}],
+	
+	"permissions": [
+		"storage"
+	]
+}
